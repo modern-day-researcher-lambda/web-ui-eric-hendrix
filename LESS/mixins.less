@@ -1,0 +1,68 @@
+.flexBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+
+.btnMaster(@width: 8em; @height: 2em;){
+    background-color: #61accf; 
+    border: solid 1px grey;
+    color: white;
+    border-radius: 10px;
+    //padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 75px;
+  }
+  
+  .round-borders (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+  }
+  
+  .btnLinkStyle(@color;){
+    color: @color;
+    text-decoration: none;
+    text-align: center;
+   
+    display:inline-block;
+    width:100%;
+    height:100%;
+    //border: solid 1px red;
+    
+    .linkVertPad(0.5rem);
+    animation-name: textToWhite;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1; 
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+        &:hover{
+        animation-name:textToBlack ;
+
+        animation-duration: 1.5s; 
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1; 
+        animation-delay: 0s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+    
+    }
+    
+  }
+  
+  .linkVertPad(@padding){
+      padding-top: @padding;
+      padding-bottom: @padding;
+  }
+
+  
+  

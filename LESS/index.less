@@ -8,32 +8,110 @@
 
 // Reusable Components
 @import 'navigation.less';
-@import 'containers.less';
+
 
 @import 'button.less';
-@import 'img.less';
+
 @import 'footer.less';
+@import 'animation.less';
 
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
 
+.main{
+    .alt{
+        .logo{
+            
+        }
+        
+    }
+    .menu{
+		border: solid 1px blue;
+        .links{
 
+        }
+    }
+    .banner{
+        height:850px;
+        background-color:@bodyBackground;
+        align-self: center;
+        .flexBox;
+        .anim{
+            .anim {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .svg{
+                    position: relative;
+                width: 100%;
+                height: 100%;
+                }
+              }
+              .anim path {
+                stroke-width: 2;
+              }
+        }
+    
+    }
+    .midContainer{
+        .featureItem{
+            .featureSvgLogo{
 
-.banner{
-    height:1050px;
-    background-color: rgb(108, 144, 161);
-}
+            }
+            .featureHeadline{
 
-.mainItem{
+            }
+            .featureContent{
 
-    width: 50%;
-}
-
-.mainContainer{
-    display: flexbox;
-    justify-content: center;
-    border: solid 1px red;
-
+            }
+            .btn{
+                .btnMaster;
+                .btnLink{
+                    .btnLinkStyle(@linkColor);
+                }
+                
+            }
+        }
+    }
+    .midContainer{
+        background-color: @bodyBackground;
+        display: flex;
+        justify-content: center;
+        border: solid 1px red;
+       
+        .mainItem{
+            
+            min-width: 320px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            //align-items: center;
+            width: 50%;
+            border: solid 1px green;
+            .image{
+                align-self: center;
+                margin: 3px;
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                border: solid 1px red;
+                display: flex;
+                padding: 2rem;
+                .btn{
+                    align-self: center;
+                    .flexBox;
+                    .btnMaster(25em, 4em);
+                    a{
+                        .btnLinkStyle(@linkColor);
+                    }
+                .align-center{
+                    border: solid 1px red;
+                    align-self: center;
+                }
+            }
+        }
+    }
 }
 
 
@@ -426,4 +504,5 @@
 				padding: 3rem 0 1rem 0 ;
 			}
 
-		}
+        }
+    }
