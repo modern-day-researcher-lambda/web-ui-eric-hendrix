@@ -17,7 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel="stylesheet">
+	<link href="./sass/style.css" rel="stylesheet" type="text/css">
 	
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -87,22 +87,28 @@
 		<!-- ////////////Content Box 01 -->
 		<section class="box-content box-1">
 			<div class="">
+					
 				<!-- ////////////Content Box 05 -->
-		<section class="box-content box-5 box-style-3">
+		<section class="box-content box-5 box-style-3 quote">
 			<div class="container">
 				<div class="row">
 					<div class="box-item wow fadeInDown" data-wow-delay=".1s" data-wow-duration="1s">
-						<span class="txt-type" data-wait="2" data-words='["The heart and soul of good writing is research; you should write not what you know but what you can find out about."]'></span>
-						<blockquote><p></p></blockquote><p> - Robert J. Sawyer</p>
+						<blockquote></blockquote><span class="txt-type" data-wait="2" data-words='["The heart and soul of good writing is research; you should write not what you know but what you can find out about."]'></span>
+						<p id="quote"></p></blockquote><p> - Robert J. Sawyer</p>
 					</div>
 				</div>
 			</div>
 		</section>
+		<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
+			<h2>Features</h2>
+			<hr class="line">
+			<div class="intro">What does Research Pal do?</a></div>
+		</div>
 				<div class="content no-gutter wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
 					
 					<div class="portfolio-box col-lg-3 col-md-4 col-xs-6">
 						<div class="portfolio-box-inner">
-							<img src="images/4.jpg" class="img-responsive" alt="">
+							<img src="./images/research.png" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
 									<h3 class="product-name">Project Name</h3>
@@ -113,7 +119,7 @@
 					</div>
 					<div class="portfolio-box col-lg-3 col-md-4 col-xs-6">
 						<div class="portfolio-box-inner">
-							<img src="images/2.jpg" class="img-responsive" alt="">
+							<img src="./images/2.jpg" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
 									<h3 class="product-name">Project Name</h3>
@@ -124,7 +130,7 @@
 					</div>
 					<div class="portfolio-box col-lg-3 col-md-4 col-xs-6">
 						<div class="portfolio-box-inner">
-							<img src="images/11.jpg" class="img-responsive" alt="">
+							<img src="./images/research2.png" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
 									<h3 class="product-name">Project Name</h3>
@@ -132,7 +138,18 @@
 								</div>
 							</div>
 						</div>
-					</div>
+                    </div>
+                    <div class="portfolio-box col-lg-3 col-md-4 col-xs-6">
+                            <div class="portfolio-box-inner">
+                                <img src="./images/research2.png" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-description">
+                                        <h3 class="product-name">Project Name</h3>
+                                        <p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 				</div>
 				
 			</div>
@@ -299,12 +316,18 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.localScroll.min.js"></script>
 	<script src="js/jquery.scrollTo.min.js"></script>
-	<script src="js/SmoothScroll.js"></script>
+	
 	<script src="js/wow.min.js"></script>
 	<script src="js/typeWriter.js"></script>
-	
+	<script src="https://unpkg.com/@barba/core"></script>
 
-	<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pageTransitions.js"></script>
+    <script
+  crossorigin="anonymous"
+  src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"
+></script>
+	
 	
 </div>
 </body>

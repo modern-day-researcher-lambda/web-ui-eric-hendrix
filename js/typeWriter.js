@@ -1,6 +1,7 @@
 class TypeWriter{
-    constructor(txtElement, words, wait = 3000){
-        this.txtElement = txtElement;
+    constructor(txtElement, words, wait = 3000, fontWeight){
+		this.txtElement = txtElement;
+		this.txtElement.style.fontSize = fontWeight;
         this.words = words;
         this.txt = '';
         this.wordIndex = 0;
@@ -28,7 +29,7 @@ class TypeWriter{
         this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
         // Initial Type Speed
-        let typeSpeed = 100;
+        let typeSpeed = 150;
 
         if(this.isDeleting){
             typeSpeed /= 2;
@@ -45,7 +46,7 @@ class TypeWriter{
             // Move to next word
             this.wordIndex++;
             // Pause before start typing
-            typeSpeed = 500;
+            typeSpeed = 2000;
         }
 
         setTimeout(() => this.type(), typeSpeed);
@@ -61,5 +62,5 @@ function init(){
     const words = JSON.parse(txtElement.getAttribute('data-words'));
     const wait = txtElement.getAttribute('data-wait');
     // Init Typewriter
-    new TypeWriter(txtElement, words, Number(wait) );
+    new TypeWriter(txtElement, words, Number(wait), '30pt' );
 }

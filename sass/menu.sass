@@ -1,0 +1,133 @@
+/* ---------------------------------------------------------------------------- */
+/* ------------------------------------Menu------------------------------------ */
+/* ---------------------------------------------------------------------------- */
+#menu 
+    border-radius: 0
+    padding: 10px 15px
+    text-transform: uppercase
+    font-family: Montserrat,sans-serif
+    background: #fff
+#menu #heading 
+    float: left
+    padding-left: 15px
+    font-size: 20px
+    font-weight: 700
+    line-height: 40px
+    color: #fff
+    margin-top: 10px
+    text-transform: uppercase
+#menu a.navbar-brand:hover
+    color: #fff
+#menu .navbar-brand
+    margin: 0
+    height: auto
+    text-transform: uppercase
+    padding: 0px 18px
+#menu .logo 
+
+#menu .dropdown-menu 
+    background-color: #2B2D3F
+    border: none
+    border-radius: 0
+
+#menu ul.nav .dropdown-menu li a
+    color: #fff
+
+#menu ul.nav .dropdown-menu li a:hover
+    color: #42AB9E
+
+#menu .dropdown-inner 
+    display: table
+
+#menu .dropdown-inner ul 
+    display: table-cell
+
+#menu .dropdown-inner a 
+    min-width: 160px
+    display: block
+    padding: 3px 20px
+    clear: both
+    line-height: 20px
+    color: #000
+    margin: 0 5px
+
+#menu li.dropdown:hover>a, #menu li.dropdown:focus>a, #menu li.dropdown:active>a
+    color: #42AB9E
+    background: none
+
+.navbar
+    top: 0rem
+    width: 100%
+    position: fixed
+    margin: 0
+    z-index: 20
+
+#menu ul.nav li
+    padding-right: 16px
+
+#menu ul.nav li a
+    padding: 8px 10px
+    color: #333
+    font-size: 14px
+    font-weight: bold
+    position: relative
+
+#menu ul.nav li.active a:after
+    position: absolute
+    content: ""
+    background: #333
+    bottom: 0
+    left: 50%
+    height: 3px
+    width: 20px
+    transform: translateX(-50%)
+
+#menu ul.nav li.dropdown a
+
+#menu .nav > li > a:hover, #menu .nav > li > a:focus
+    color:#42AB9E
+    background: none
+
+#menu .btn-navbar 
+    font-size: 20px
+    color: #FFF
+    padding: 5px 15px
+    float: right
+    border: 3px solid #fff
+
+
+@media  (min-width: 768px) 
+    #menu ul.nav 
+        float: right 
+        margin-top: 5px
+
+    #menu .dropdown:hover .dropdown-menu 
+        display: block
+	
+
+@media(max-width:767px) 
+	
+    #menu
+        background: #1D2027
+        padding: 10px 0
+
+    #menu .navbar-brand 
+        display: block
+        color: #fff
+        margin-top: 10px
+
+    #menu div.dropdown-inner > ul.list-unstyled 
+        display: block
+
+    #menu .dropdown-inner a 
+        width: 100%
+        color: #fff
+
+    #menu div.dropdown-menu 
+        margin-left: 0 !important
+        padding-bottom: 10px
+        background-color: rgba(0, 0, 0, 0.1)
+
+    #menu ul.nav li a
+        color: #fff
+
