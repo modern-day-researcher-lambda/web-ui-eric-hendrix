@@ -32,25 +32,33 @@
         }
     }
     .banner{
-        height:850px;
+		border: solid 1px blue;
+        height:85rem;
         background-color:@bodyBackground;
         align-self: center;
-        .flexBox;
+		.flexBox;
+		flex-direction: column;
         .anim{
-            .anim {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                .svg{
-                    position: relative;
-                width: 100%;
-                height: 100%;
-                }
-              }
-              .anim path {
-                stroke-width: 2;
-              }
-        }
+			width: 100%;
+			height: 100%;
+			position: relative;
+			
+			.svg{
+				position: relative;
+			width: 100%;
+			height: 100%;
+			.morph {
+				border: solid 1px red;
+				stroke-width: 2;
+				width: 100%;
+			height: 100%;
+			}
+			}
+			
+		}
+		
+            
+        
     
     }
     .midContainer{
@@ -123,53 +131,7 @@
 		padding-top: 3.25em;
 	}
 
-	@-moz-keyframes reveal-header {
-		0% {
-			top: -4em;
-			opacity: 0;
-		}
-
-		100% {
-			top: 0;
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes reveal-header {
-		0% {
-			top: -4em;
-			opacity: 0;
-		}
-
-		100% {
-			top: 0;
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes reveal-header {
-		0% {
-			top: -4em;
-			opacity: 0;
-		}
-
-		100% {
-			top: 0;
-			opacity: 1;
-		}
-	}
-
-	@keyframes reveal-header {
-		0% {
-			top: -4em;
-			opacity: 0;
-		}
-
-		100% {
-			top: 0;
-			opacity: 1;
-		}
-	}
+	
 
 	#header {
 		background: rgba(0, 0, 0, 0.975);

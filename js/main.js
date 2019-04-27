@@ -1,107 +1,134 @@
-var svgToAnimate = document.querySelector("#morph");
-var svg = Array.from(svgToAnimate.childNodes);
-console.log(svgToAnimate);
 
-var sect1 = document.getElementById('sect1');
-var overlay = document.getElementById('morph');
+	
+/* --------------------------------------------------
+	Initialization
+-------------------------------------------------- */
 
-var morphing = anime({
-    targets: '.morph',
-    d: [
-        {value: `M-0.5,1079.5h1920l1-638c-17.1,78.3-150.1,211.3-498,297c-91.4,22.5-220.9,17-290,14
-        c-211.2-9.1-336.5-54.6-436-74c-150.2-29.3-377.2-25.7-697,140C-0.5,905.5-0.5,992.5-0.5,1079.5`},
-        {value: `M-0.5,1079.5h1920l1-1080c-68,1-149,0-331,0c-94.2,0-268.8-0.3-338,0c-208,1-394.6-0.7-496,0
-        c-148,1-386,0-755,0C0.5,86.5-0.5,992.5-0.5,1079.5`}
-    ], 
-    easing: 'easeInOutExpo'
-})
+    // Initialize all functions when the document is ready.
+	$(document).ready(function(){
+		initResize();
+		initScroller();
+		initAnimation();
+		//initowlCarousel();
+		initContactAjax();
+	});
 
-//var initialPaths = svgToAnimate.querySelectorAll(shapes);
-////var textPaths = text.querySelectorAll('path');
 
-// var pathEls = document.querySelectorAll('path');
-// for (var i = 0; i < pathEls.length; i++) {
-//   var pathEl = pathEls[i];
-//   var offset = anime.setDashoffset(pathEl);
-//   pathEl.setAttribute('stroke-dashoffset', offset);
-//   anime({
-//     targets: pathEl,
-//     strokeDashoffset: [offset, 0],
-//     duration: anime.random(1000, 3000),
-//     delay: anime.random(0, 2000),
-//     loop: true,
-//     direction: 'alternate',
-//     easing: 'easeInOutSine',
-//     autoplay: true
-//   });
-// }
+/* --------------------------------------------------
+	Scroll Nav
+-------------------------------------------------- */
 
-class TypeWriter{
-    constructor(txtElement, words, wait = 3000){
-        this.txtElement = txtElement;
-        this.words = words;
-        this.txt = '';
-        this.wordIndex = 0;
-        this.wait = parseInt(wait, 10);
-        this.type();
-        this.isDeleting = false;
-    }
+	function initScroller () {
+		$('#scroll-page-content').localScroll({
+           target:'#page-content'
+        });
+		$('#page-top').localScroll({
+           target:'body'
+        });
+	}
 
-    type(){
-        // Current index of word
-        const current = this.wordIndex % this.words.length;
-        // Get full text of current word
-        const fullTxt = this.words[current];
 
-        // check if deleting
-        if(this.isDeleting){
-            //Remove char
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        }else{
-            // Add char
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+/* --------------------------------------------------
+	Animation
+-------------------------------------------------- */
 
-        // Insert txt into element
-        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+	function initAnimation () {
+		new WOW().init();
+	}
 
-        // Initial Type Speed
-        let typeSpeed = 300;
 
-        if(this.isDeleting){
-            typeSpeed /= 2;
-        }
+	
 
-        // If word is complete
-        if(!this.isDeleting && this.txt === fullTxt){
-            // Make pause at end
-            typeSpeed = this.wait;
-            // Set delete to true
-            this.isDeleting = true;
-        }else if(this.isDeleting && this.txt === ''){
-            this.isDeleting = false;
-            // Move to next word
-            this.wordIndex++;
-            // Pause before start typing
-            typeSpeed = 500;
-        }
+/* --------------------------------------------------
+	Resize
+-------------------------------------------------- */
 
-        setTimeout(() => this.type(), typeSpeed);
-    }
-}
+	function initResize () {
+		var header = $(".header-text");
+		$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			if ($(".index-page").length > 0) {
+				if (scroll >= 270) {
+					header.addClass("remove");
+				} else {
+					header.removeClass("remove");
+				}
+			}else{
+				if (scroll >= 120) {
+					header.addClass("remove");
+				} else {
+					header.removeClass("remove");
+				}
+			}
+		});
+		
+		$(window).resize(function(){
+			var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+			var footerHeight = $('#footer').outerHeight();
+			if (width >= '768') { 
+				$('#page-content').css({'marginBottom': footerHeight + 'px'});
+			}else{
+				$('#page-content').css({'marginBottom': '0px'});
+			}
+		});
+		$(window).resize();
+	}
+	
 
-// Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+/* --------------------------------------------------
+	Ajax Contact Form
+-------------------------------------------------- */
 
-// Init App
-function init(){
-    const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
-    // Init Typewriter
-    new TypeWriter(txtElement, words, Number(wait) );
-}
-
-var nav = document.querySelector(".menu");
-//nav.classList.toggle("")
-console.log(nav)
+	function initContactAjax () {
+		$("#submit_btn").click(function() { 
+		   
+			var proceed = true;
+			//simple validation at client's end
+			//loop through each field and we simply change border color to red for invalid fields		
+			$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+				$(this).css('border-color',''); 
+				if(!$.trim($(this).val())){ //if this field is empty 
+					$(this).css('border-color','red'); //change border color to red   
+					proceed = false; //set do not proceed flag
+				}
+				//check invalid email
+				var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+				if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+					$(this).css('border-color','red'); //change border color to red   
+					proceed = false; //set do not proceed flag				
+				}	
+			});
+		   
+			if(proceed) //everything looks good! proceed...
+			{
+				//get input field values data to be sent to server
+				post_data = {
+					'user_name'		: $('input[name=name]').val(), 
+					'user_email'	: $('input[name=email]').val(), 
+					<!-- 'country_code'	: $('input[name=phone1]').val(),  -->
+					<!-- 'phone_number'	: $('input[name=phone2]').val(),  -->
+					'subject'		: $('select[name=subject]').val(), 
+					'msg'			: $('textarea[name=message]').val()
+				};
+				
+				//Ajax post data to server
+				$.post('contact.php', post_data, function(response){  
+					if(response.type == 'error'){ //load json data from server and output message     
+						output = '<div class="error">'+response.text+'</div>';
+					}else{
+						output = '<div class="success">'+response.text+'</div>';
+						//reset values in all input fields
+						$("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
+						$("#contact_form #contact_body").slideUp(); //hide form after success
+					}
+					$("#contact_form #contact_results").hide().html(output).slideDown();
+				}, 'json');
+			}
+		});
+		
+		//reset previously set border colors and hide all message on .keyup()
+		$("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
+			$(this).css('border-color',''); 
+			$("#result").slideUp();
+		});
+	}
