@@ -9,6 +9,8 @@ Role: Web UI
 
 [TDD - Research Pal](https://docs.google.com/document/d/1CBP-_Gt09m4zCFKVEgjKFhud6QLAFnYnStlSmIRMeQ4/edit?ts=5cc24640#)
 
+[Deployment:](https://affectionate-kilby-3dfeda.netlify.com/team.html) 
+-----------
 Product/App name: Research Pal
 
 "Pitch: I have a problem and it's resource links shared to articles that my wife wants me to read. I need a place where I can organize that chaos. Enter, Research Pal! The place where all articles, blog posts can be shared, categorized and shown in a beautiful interface.
