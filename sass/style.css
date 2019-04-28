@@ -251,7 +251,7 @@ header .main-header {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background: url(../images/showcase_bg.jpg) center center;
+  background: url(../images/showcase_bg.png) center center;
   background-size: cover;
   z-index: 2;
   margin: 0;
@@ -268,7 +268,6 @@ header.sub-header {
 
 /* Header Styles */
 .header-text {
-  border: solid 1px green;
   align-self: center;
   margin-top: 0;
   transition: opacity 1s ease 0s, transform 1s ease 0s;
@@ -487,7 +486,7 @@ body.sub-page .header-text {
 
 #menu .btn-navbar {
   font-size: 20px;
-  color: #FFF;
+  color: #fff;
   padding: 5px 15px;
   float: right;
   border: 3px solid #fff;
@@ -505,13 +504,13 @@ body.sub-page .header-text {
 }
 @media (max-width: 767px) {
   #menu {
-    background: #1D2027;
+    background: #fff;
     padding: 10px 0;
   }
 
   #menu .navbar-brand {
     display: block;
-    color: #fff;
+    color: black;
     margin-top: 10px;
   }
 
@@ -521,7 +520,8 @@ body.sub-page .header-text {
 
   #menu .dropdown-inner a {
     width: 100%;
-    color: #fff;
+    color: black;
+    margin-left: 20px;
   }
 
   #menu div.dropdown-menu {
@@ -531,7 +531,7 @@ body.sub-page .header-text {
   }
 
   #menu ul.nav li a {
-    color: #fff;
+    color: black;
   }
 }
 /* ---------------------------------------------------------------------------- */
@@ -1200,6 +1200,10 @@ a.btn:focus {
 .btn-toTop:hover {
   background: #42AB9E;
   color: #fff;
+}
+
+.bootCenterFix {
+  margin: 0 -15 0 200;
 }
 
 /*# sourceMappingURL=style.css.map */
