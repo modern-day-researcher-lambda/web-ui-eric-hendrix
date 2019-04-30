@@ -34,12 +34,21 @@
 
 	<!--////////////////////////////////////Header-->
 	<header>
-            <i class="fas fa-bars"></i>
+           
 		<!--Navigation-->
 		<nav id="menu" class="navbar">
+                
 				<div class="container-fluid">
 					<div class="navbar-header">
-					  <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fas fa-bars"></i></button>
+                      <button id="menuButton" 
+                            type="button" 
+                            class="btn btn-navbar navbar-toggle" 
+                            data-toggle="collapse" 
+                            data-target=".navbar-ex1-collapse">
+                            
+                            <i id="menuButtonSVG" class="fas fa-bars-x3"></i>
+
+                        </button>
 						<a class="navbar-brand" href="#">
 							<img src="images/logo.png" width="250px"/>
 						</a>
@@ -55,10 +64,12 @@
 			</nav>
 		<!---Main Header--->
 		<div class="main-header">
+                
 			<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
-					<h1>Research Pal</h1>
+                    <h1>Research Pal</h1>
+                    <progress-bar></progress-bar>
 					<p>We have a thing for orginazation</p>
 				</div>
 			</div><!-- /header-text -->
@@ -232,6 +243,8 @@
 	<script src="https://unpkg.com/@barba/core"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/fixShims.js"></script>
+    <script src="./components/progressBar/progressBar.js"></script>
     <script src="js/pageTransitions.js"></script>
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>

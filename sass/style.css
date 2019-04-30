@@ -521,11 +521,9 @@ body.sub-page .header-text {
   #menu .dropdown-inner a {
     width: 100%;
     color: black;
-    margin-left: 20px;
   }
 
   #menu div.dropdown-menu {
-    margin-left: 0 !important;
     padding-bottom: 10px;
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -821,6 +819,15 @@ body.sub-page .header-text {
 /* ---------------------------------------------------------------------------- */
 .box-content.box-5.box-style-3.quote {
   min-height: 246px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 /* ---Article--- */
@@ -1200,10 +1207,6 @@ a.btn:focus {
 .btn-toTop:hover {
   background: #42AB9E;
   color: #fff;
-}
-
-.bootCenterFix {
-  margin: 0 -15 0 200;
 }
 
 /*# sourceMappingURL=style.css.map */
