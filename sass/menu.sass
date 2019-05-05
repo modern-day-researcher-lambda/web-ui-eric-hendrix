@@ -1,12 +1,17 @@
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Menu------------------------------------ */
 /* ---------------------------------------------------------------------------- */
+
+#menuButtonSVG 
+    font-size: 2rem
 #menu 
     border-radius: 0
+    border-bottom: solid 2px black
     padding: 10px 15px
     text-transform: uppercase
     font-family: Montserrat,sans-serif
-    background: $backgroundPlus
+    background: $gradientBG
+    box-shadow: black 0px 2px 6px 2px
 #menu #heading 
     float: left
     padding-left: 15px
@@ -26,7 +31,7 @@
 #menu .logo 
 
 #menu .dropdown-menu 
-    background-color: #2B2D3F
+    background: $gradientBG
     border: none
     border-radius: 0
 
@@ -34,7 +39,7 @@
     color: $backgroundPlus
 
 #menu ul.nav .dropdown-menu li a:hover
-    color: #42AB9E
+    color: $lightBrown
 
 #menu .dropdown-inner 
     display: table
@@ -52,7 +57,7 @@
     margin: 0 5px
 
 #menu li.dropdown:hover>a, #menu li.dropdown:focus>a, #menu li.dropdown:active>a
-    color: #42AB9E
+    color: $lightBrown
     background: none
 
 .navbar
@@ -67,7 +72,7 @@
 
 #menu ul.nav li a
     padding: 8px 10px
-    color: #333
+    color: $backgroundPlus
     font-size: 14px
     font-weight: bold
     position: relative
@@ -85,7 +90,7 @@
 #menu ul.nav li.dropdown a
 
 #menu .nav > li > a:hover, #menu .nav > li > a:focus
-    color:#42AB9E
+    color:$lightBrown
     background: none
 
 #menu .btn-navbar 
@@ -93,32 +98,45 @@
     color: $backgroundPlus
     padding: 5px 15px
     float: right
-    border: 3px solid $backgroundPlus
+    border-radius: 5px
+    
+    -webkit-box-shadow: 0px 0px 37px -6px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 0px 37px -6px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 37px -6px rgba(0,0,0,0.75)
 
+#menuButton
+    border-radius: 5px
 
 @media  (min-width: 768px) 
+    #menu 
+        
+        background: $gradientBG
+        box-shadow: black 0px 2px 6px 2px
+
     #menu ul.nav 
         float: right 
         margin-top: 5px
+        //background: $gradientBG
         
 
     #menu .dropdown:hover .dropdown-menu 
-        display: block
+        //display: block
 	
 
 @media(max-width:767px) 
 	
     #menu
-        background: $backgroundPlus
-        padding: 10px 0
+        //background: $gradientBG
+        //padding: 10px 0
 
     #menu .navbar-brand 
         display: block
-        color: black
+        color: $backgroundPlus
         margin-top: 10px
 
     #menu div.dropdown-inner > ul.list-unstyled 
         display: block
+        
 
     #menu .dropdown-inner a 
         width: 100%
@@ -129,11 +147,16 @@
         //margin-left: 0 !important
       
         padding-bottom: 10px
-        background-color: rgba(0, 0, 0, 0.1)
+        //background: $gradientBG
 
     #menu ul.nav li a
-        color: black
+        color: $backgroundPlus
 
-    
+    #menu .btn-navbar 
+
+        color: $backgroundPlus
+        &:active
+            color: $darkBrown
+
         
 
