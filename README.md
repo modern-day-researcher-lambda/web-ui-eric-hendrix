@@ -9,7 +9,7 @@ Role: Web UI
 
 [TDD - Research Pal](https://docs.google.com/document/d/1CBP-_Gt09m4zCFKVEgjKFhud6QLAFnYnStlSmIRMeQ4/edit?ts=5cc24640#)
 
-[Deployment:](https://affectionate-kilby-3dfeda.netlify.com/team.html) 
+[Netlify Deployment](https://affectionate-kilby-3dfeda.netlify.com/index.html) 
 -----------
 Product/App name: Research Pal
 

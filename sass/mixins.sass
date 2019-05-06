@@ -3,6 +3,8 @@
     justify-content: center
     align-items: center
     align-content: center
+    flex-direction: row
+    justify-content: space-around
   
 =bootCenterFix()
     margin: 0 -15 0 200
@@ -60,8 +62,8 @@
     padding-top: $padding
     padding-bottom: $padding
   
-=boxShadowMaker($left, $top, $right, $bottom)
-    -webkit-box-shadow: $left $top $right $bottom rgba(0,0,0,0.67)
-    -moz-box-shadow: $left $top $right $bottom rgba(0,0,0,0.67)
-    box-shadow: $left $top $right $bottom rgba(0,0,0,0.67)
+=boxShadowMaker($left, $top, $right, $bottom, $alpha)
+    -webkit-box-shadow: $left $top $right $bottom rgba(0,0,0,$alpha)
+    -moz-box-shadow: $left $top $right $bottom rgba(0,0,0,$alpha)
+    box-shadow: $left $top $right $bottom rgba(0,0,0,$alpha)
   
