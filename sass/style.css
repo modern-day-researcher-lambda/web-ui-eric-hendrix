@@ -1160,7 +1160,7 @@ footer .copyright {
 }
 
 .portfolio-box:hover .portfolio-box-caption {
-  background: rgba(66, 171, 158, 0.9);
+  background: #DCA67B;
 }
 
 .portfolio-box:hover .portfolio-box-caption .portfolio-box-description .product-category,
