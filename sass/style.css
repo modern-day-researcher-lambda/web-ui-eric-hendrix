@@ -561,12 +561,14 @@ body.sub-page .header-text {
 /* ---HomePage--- */
 .box-content {
   padding: 100px 0;
+  background-color: #f5f5dc;
 }
 
 .box-content .heading {
   margin-bottom: 70px;
   text-align: center;
   margin-top: 40px;
+  background-color: #f5f5dc;
 }
 
 .box-content .heading h2 {
@@ -583,7 +585,7 @@ body.sub-page .header-text {
 }
 
 .box-content.box-style-2 {
-  background: #ECECEC;
+  background-color: #f5f5dc;
 }
 
 .box-content.box-style-3 {
