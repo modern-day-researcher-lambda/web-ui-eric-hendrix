@@ -282,7 +282,7 @@ body.index-page .header-text {
 
 body.index-page .header-text .header-text-inner {
   border: 4px solid #000;
-  display: inline-block;
+  display: flexbox;
   padding: 20px 40px;
 }
 
@@ -321,16 +321,9 @@ body.sub-page .header-text {
   letter-spacing: 6.5px;
 }
 
-@media (max-width: 978px) {
-  body.index-page .header-text h1 {
-    font-size: 39px;
-    letter-spacing: 10px;
-  }
-
-  body.index-page .header-text p {
-    font-size: 16px;
-    letter-spacing: 5px;
-    margin-top: 0;
+@media (max-width: 768px) {
+  .header-text-inner h1 {
+    font-size: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -519,7 +512,6 @@ body.sub-page .header-text {
 @media (max-width: 767px) {
   #menu .navbar-brand {
     display: block;
-    color: #FEFEFE;
     margin-top: 10px;
   }
 
@@ -555,18 +547,19 @@ body.sub-page .header-text {
   overflow: visible;
   z-index: 2;
   background: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.7) 0 105px 90px -90px;
 }
 
 /* ---HomePage--- */
 .box-content {
   padding: 100px 0;
+  background-color: #f5f5dc;
 }
 
 .box-content .heading {
   margin-bottom: 70px;
   text-align: center;
   margin-top: 40px;
+  background-color: #f5f5dc;
 }
 
 .box-content .heading h2 {
@@ -583,7 +576,7 @@ body.sub-page .header-text {
 }
 
 .box-content.box-style-2 {
-  background: #ECECEC;
+  background-color: #f5f5dc;
 }
 
 .box-content.box-style-3 {
@@ -1176,6 +1169,21 @@ footer .copyright {
 
   .portfolio-box .portfolio-box-caption .portfolio-box-description .product-name {
     font-size: 19px;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio-box .portfolio-box-caption .portfolio-box-description .product-category {
+    font-size: 10px;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-description .product-name {
+    font-size: 12px;
+  }
+}
+@media (min-width: 770px) {
+  .portfolio-box .portfolio-box-caption {
+    display: flexbox;
+    margin: 20px 20px 20px 20px;
   }
 }
 /* ---------------------------------------------------------------------------- */
